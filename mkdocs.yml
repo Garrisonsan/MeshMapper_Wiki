@@ -29,6 +29,8 @@ nav:
   - Support:
     - Report Bugs & Features: reportbugs.md
 
+  - Wardriving App: wardriving-app.md
+
   - Release Notes:
     - February 20, 2026: release-notes/260220.md
     - February 19, 2026: release-notes/260219.md

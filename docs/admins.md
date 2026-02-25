@@ -75,6 +75,17 @@ Manage user identities to group multiple contacts.
   - **Leaderboard Grouping:** Associate multiple contacts/companions under a single User identity. This ensures that all contributions from these devices are aggregated together on the leaderboards.  The name that will display on the leaderboards is that of the selected Main Companion.
   - **Future Functionality:** Currently, this feature is for administrative grouping only. However, plans are in place to expand this into a full Contributor Portal, allowing users to log in, view their personal statistics, and manage the data they have contributed to MeshMapper.  There are some fields (like Username) that exist for this purpose but are not yet implemented.
 
+### Administrators
+
+The **Administrators** tab provides a read-only view of all admin accounts that have been granted access to your region.
+
+  - **Name:** The username of the administrator account.
+  - **Contact:** The contact information on file for the administrator (e.g., Discord handle, email).
+  - **Region(s):** On multiregion admin panels, each administrator's entry will display which sub-regions they have been granted access to.
+
+!!! info "Making Changes to Administrators"
+    This tab is informational only. To add a new administrator, remove access, or update an existing administrator's details, please reach out to a [Global Administrator](https://wiki.meshmapper.net/administratorlist/).
+
 ## Maintenance Tools
 
 The **Tools** tab contains powerful utilities for bulk operations. **Use with caution.**
