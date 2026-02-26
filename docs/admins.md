@@ -78,14 +78,31 @@ Manage user identities to group multiple contacts.
 
 ### Administrators
 
-The **Administrators** tab provides a read-only view of all admin accounts that have been granted access to your region.
+The **Administrators** tab displays all admin accounts that have been granted access to your region and allows you to invite new administrators.
 
   - **Name:** The username of the administrator account.
   - **Contact:** The contact information on file for the administrator (e.g., Discord handle, email).
-  - **Region(s):** On multiregion admin panels, each administrator's entry will display which sub-regions they have been granted access to.
+  - **Zone:** On multiregion admin panels, each administrator's entry will display which sub-regions they have been granted access to.
+  - **Status:** Indicates whether the administrator has completed registration.
+      - **Active:** The administrator has claimed their account and set a key.
+      - **Pending Registration:** The administrator has been invited but has not yet claimed their account.
 
-!!! info "Making Changes to Administrators"
-    This tab is informational only. To add a new administrator, remove access, or update an existing administrator's details, please reach out to a [Global Administrator](https://wiki.meshmapper.net/administratorlist/).
+#### Adding a New Administrator
+
+Region admins can invite new administrators directly from this tab by clicking **+ Add Administrator**.
+
+  1. **Username** *(required)*: Choose a username for the new administrator. This must be unique.
+  2. **Contact Info** *(required)*: Enter the new administrator's contact information (e.g., Discord handle or email) so they can be reached if needed.
+  3. **Zone Assignment** *(required)*: Select which zone the new administrator should have access to. On multiregion admin panels, you can assign the administrator to the multi-region group or to an individual sub-region.
+
+Once created, a message will display with a registration link and the username. Share both with the new administrator.
+
+#### Registration
+
+New administrators claim their account by visiting [register.meshmapper.net](https://register.meshmapper.net) and entering the username provided to them. If the account exists and has not yet been registered, a **temporary key** will be generated and displayed.
+
+!!! warning "Temporary Key"
+    The temporary key is shown **only once** during registration. The new administrator must copy it immediately. After logging in for the first time, they should change their key from the **User Settings** tab.
 
 ## Maintenance Tools
 
