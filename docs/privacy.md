@@ -81,7 +81,7 @@ To exercise any of these rights, please contact us at admin@meshmapper.net.
 
 ## Children's Privacy
 
-MeshMapper is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal data, please contact us at admin@meshmapper.net so we can remove it.
+MeshMapper is not directed at children. We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us at admin@meshmapper.net so we can remove it.
 
 ## Changes to This Notice
 
