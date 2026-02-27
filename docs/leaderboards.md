@@ -16,6 +16,7 @@ At the top of the page, you will find high-level metrics for the current region.
     - **Dead/Dropped**: Failed packets or those that hit a repeater but did not route further.
   - **Active Repeaters**: The count of repeaters currently online and trusted. **Note:** Repeaters flagged as "Duplicate" or "Excluded" are not counted here.
   - **Estimated Coverage**: A percentage representing how much of the mapped grid contains valid coverage (BIDIR, TX, DISC, RX).
+  - **Total Grid Squares**: The total number of unique ~300m grid squares that have been mapped by at least one user (matching "Simplified Mode" on the map).
 
 ## User Leaderboards
 
@@ -23,6 +24,9 @@ User rankings are based on the number of valid data points contributed. 1 Ping =
 
   - **Top Contributors (7 Days)**: A rolling window of activity over the last week. This is useful for seeing who is currently active in the community.
   - **All Time Legends**: The total accumulation of contributions since the region was onboarded.
+
+### Top Explorers
+This leaderboard rewards **exploration** — covering new ground rather than re-driving the same routes. It counts the number of unique ~300m grid squares (matching "Simplified Mode" on the map) where each user placed the **first-ever ping**. If a grid square has been pinged 100 times by 10 different users, only the user who mapped it first gets credit. All coverage types count (BIDIR, TX, RX, DISC, DEAD, DROP).
 
 | Ranking | Indicator |
 | --- | --- |
@@ -42,6 +46,17 @@ This ranks repeaters by the furthest distance (in km/m) they have achieved a lin
   - **RX (Purple)**: Max distance where the user heard the repeater (but didn't transmit). This indicates the repeater has a strong transmit signal.
 
 *Tip: You can click the headers (BIDIR, TX, RX) to sort the table by that specific metric.*
+
+## Global Leaderboard
+
+The [Global Leaderboard](https://meshmapper.net/global_leaderboard.php) aggregates data from all active regions into a single view. It is generated periodically by a scheduled task and includes:
+
+  - **Global Stats**: Combined totals across all regions — data points, ping breakdowns, repeater count, contributors, and total grid squares.
+  - **Top Contributors (7 Days)** and **All Time Legends**: Cross-region user rankings with each user's primary region shown.
+  - **Top Explorers**: Aggregated first-mapper grid square counts across all regions.
+  - **Best Repeaters (Ping Count)** and **Best Repeaters (Max Range)**: Repeater rankings drawn from every region, with links back to the originating regional map.
+
+Each user's **primary region** is determined by where they have contributed the most data points.
 
 ## Contests
 
