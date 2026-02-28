@@ -1,7 +1,7 @@
 !!! success "Change is comining!"
     With multi-byte repeater path functionality being actively developed by the MeshCore team, the below information will, thankfully, soon become irrelevant.
 
-    Until such a time, duplicate repeater ID's can be managed using the below methods, or by driving in Passive or Hybrid modes where **Discovery** packets are used.  **Discovery**, or **DISC**, packets associate with repeaters using their full Public ID.
+    Until such a time, duplicate repeater ID's can be managed using the below methods, or by driving in **Hybrid** mode where **Discovery** packets are used.  **Discovery**, or **DISC**, packets associate with repeaters using their full Public ID.  [Read more about this here.](#workarounds)
 
 # Duplicate Repeater IDs
 
@@ -46,7 +46,7 @@ When a new repeater appears on the network with an ID that is already in use by 
   - **Data Integrity**: This data is forever flagged as being ambiguous, and will never associate with a repeater (even after the collision is resolved).
 
 ## Workarounds
-Wardrivers can choose to collect data in **Passive** or **Hybrid** modes, which utilize **Discovery**, or **DISC**, packets.  You can think of these packets as broadcasting "Hello, who's out there?", and any repeater within hearing distance (and with compatible firmware) will respond with their full Public ID.  As we're not relying on only 2 hex characters to make the association to the repeater, associations can be made even if the first 2 characters of that particular repeater is in collision with another.
+Wardrivers can choose to collect data in **Hybrid** mode, which utilizes **Discovery**, or **DISC**, packets.  You can think of these packets as broadcasting "Hello, who's out there?", and any repeater within hearing distance (and with compatible firmware) will respond with their full Public ID.  As we're not relying on only 2 hex characters to make the association to the repeater, associations can be made even if the first 2 characters of that particular repeater is in collision with another.
 
 !!! tip "Enforce Hybrid Mode"
     If a region is large and contains many duplicate ID's, region administrators can choose to "Enforce Hybrid Mode" for their region.  This will prevent any **Active** wardriving from occuring in the region by automatically enabling Hybrid mode for wardrivers.  The option is available in the regional admin panel.
