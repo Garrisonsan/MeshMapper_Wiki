@@ -24,7 +24,21 @@ The **Settings** menu (gear icon in the navigation bar) provides global options 
     *   Maximum range calculation.
     *   Leaderboard statistics.
     *   Advanced Search distance filters.
-*   **Detailed/Simnplified Mode**: Switch between **Detailed** and **Simplified** modes to display grid squares in more or less detail and show repeaters clustered at wide zoom levels.  Simplified mode greatly increases map loading time.
+    *   Grid Size labels.
+*   **Grid Mode**: Switch between **Detailed** and **Simplified** modes. Detailed mode disables repeater clustering and expands each ping into neighboring grid cells for smoother coverage. Simplified mode clusters repeaters at wide zoom levels and loads faster.
+*   **Grid Size**: Select the physical size of coverage grid squares. Options range from **50m** to **2km**, with the default being **300m** (Simplified) or **100m** (Detailed). Click to open a dropdown and select the desired size. Changing this setting reloads the map. Labels adjust automatically when switching between Metric and Imperial units.
+*   **Info Panel**: Switch between **Sidebar** and **Popup** mode for viewing ping details.
+*   **Hide Data from Missing Repeaters**: When enabled, hides coverage grid squares that reference repeaters no longer present on the map, reducing visual noise from outdated or removed infrastructure.
+
+### Effective Coverage
+
+*   **Color Spectrum**: Toggle between **Red → Green** (default) and **Red → Blue** (full spectrum) for the Effective Coverage layer.
+*   **Min Sample Size**: Set the minimum number of pings required in a grid square before it is displayed on the map (default: 1). Increasing this value filters out grid squares with limited data, giving a cleaner view of well-sampled areas.
+
+### Grid Transparency
+
+*   **Normal Opacity**: Adjust the fill opacity of coverage grid squares (default: 60%).
+*   **Faded Opacity**: Adjust the opacity of grid squares that are faded into the background, such as when the Repeater Neighbours layer is active (default: 15%).
 
 ## Overlay Layers
 

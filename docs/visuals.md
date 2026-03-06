@@ -4,7 +4,7 @@ MeshMapper visualizes mesh coverage using a grid system, color-coded markers, an
 
 ## The Grid System
 
-The map is divided into small grid squares (approximately **100m x 100m**). 
+The map is divided into small grid squares. The default grid size is **300m x 300m** in Simplified mode and **100m x 100m** in Detailed mode, but this can be changed via the **Grid Size** option in the Settings panel (sizes range from 50m up to 2km).
 
 Since a single grid square may contain multiple pings from different times or users, MeshMapper uses a **Priority System** to determine which color to display. The map will always show the "best" result available for that location.
 

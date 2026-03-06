@@ -16,7 +16,7 @@ At the top of the page, you will find high-level metrics for the current region.
     - **Dead/Dropped**: Failed packets or those that hit a repeater but did not route further.
   - **Active Repeaters**: The count of repeaters currently online and trusted. **Note:** Repeaters flagged as "Duplicate" or "Excluded" are not counted here.
   - **Estimated Coverage**: A percentage representing how much of the mapped grid contains valid coverage (BIDIR, TX, DISC, RX).
-  - **Total Grid Squares**: The total number of unique ~300m grid squares that have been mapped by at least one user (matching "Simplified Mode" on the map).
+  - **Total Grid Squares**: The total number of unique ~300m grid squares that have been mapped by at least one user. This metric always uses the default 300m grid size regardless of the user's Grid Size setting.
 
 ## User Leaderboards
 
@@ -26,7 +26,7 @@ User rankings are based on the number of valid data points contributed. 1 Ping =
   - **All Time Legends**: The total accumulation of contributions since the region was onboarded.
 
 ### Top Explorers
-This leaderboard rewards **exploration** — covering new ground rather than re-driving the same routes. It counts the number of unique ~300m grid squares (matching "Simplified Mode" on the map) where each user placed the **first-ever ping**. If a grid square has been pinged 100 times by 10 different users, only the user who mapped it first gets credit. All coverage types count (BIDIR, TX, RX, DISC, DEAD, DROP).
+This leaderboard rewards **exploration** — covering new ground rather than re-driving the same routes. It counts the number of unique ~300m grid squares where each user placed the **first-ever ping**. This metric always uses the default 300m grid size regardless of the user's Grid Size setting. If a grid square has been pinged 100 times by 10 different users, only the user who mapped it first gets credit. All coverage types count (BIDIR, TX, RX, DISC, DEAD, DROP).
 
 | Ranking | Indicator |
 | --- | --- |

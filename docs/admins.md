@@ -27,6 +27,7 @@ This tab allows granular control over individual data points (pings).
   - **Edit:** Correct erroneous data (e.g., if a user forgot to flag "External Antenna" or entered the wrong power level).
   - **Delete:** Remove individual bad data points.
   - **Debug:** If "Debug Mode" was enabled during the drive, a **Debug** button appears, allowing admins to inspect the raw JSON payload received from the device.
+  - **Bulk Select & Delete:** Use the checkboxes on each row (or the "Select All" checkbox in the header) to select multiple pings. A toolbar will appear at the bottom of the screen with an option to **Delete Selected**.
 
 ### Repeaters
 Manage the repeaters database.

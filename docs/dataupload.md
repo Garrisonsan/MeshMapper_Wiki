@@ -14,7 +14,7 @@ The uploaded file must be in **CSV** format and contain, at a minimum, the follo
 *   **Time** - Unix timestamp
 *   **Status** - See definitions below
 
-A **Coverage Radius** can also be set, which can expand each coverage point beyond the default 300x300 meters.
+A **Coverage Radius** can also be set, which can expand each coverage point beyond the default grid size (300m x 300m).
 
 You may also include any number of additional columns (e.g., `Repeater`, `RSSI`, `SNR`), which will be stored and available for display.
 
