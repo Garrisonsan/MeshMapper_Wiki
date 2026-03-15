@@ -117,7 +117,7 @@ https://[IATA].meshmapper.net/embed_repeaters.php
 
 | Parameter | Type | Default | Description |
 | --- | --- | --- | --- |
-| `mode` | `light` or `dark` | `light` | Sets the initial color scheme. Users can also toggle between modes using the button in the header. |
+| `mode` | `light` or `dark` | `light` | Sets the initial colour scheme. Users can also toggle between modes using the button in the header. |
 
 ### Example
 
