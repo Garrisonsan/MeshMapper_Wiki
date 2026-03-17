@@ -73,12 +73,12 @@ When multiple pings exist in the same grid square, the highest-priority type win
 
 | Type | Color | Priority | Description |
 | --- | --- | --- | --- |
-| `BIDIR` | Green (`#1e7e34`) | 5 (via repeater) / 3 (direct) | Two-way confirmed link. |
-| `DISC` | Cyan (`#17a2b8`) | 4.5 | Discovery or trace packet. |
+| `BIDIR` | Green (`#1e7e34`) | 6 | Two-way confirmed link. |
+| `DISC` | Cyan (`#17a2b8`) | 5 | Discovery or trace packet. |
 | `TX` | Orange (`#fd7e14`) | 4 | Transmitted but not heard back. |
-| `RX` | Purple (`#6f42c1`) | 3.5 | Heard a response without transmitting. |
+| `RX` | Purple (`#6f42c1`) | 3 | Heard traffic, without transmitting. |
 | `DEAD` | Grey (`#6c757d`) | 2 | Repeater heard but no route. |
-| `DROP` | Red (`#bd2130`) | 1 | Failed packet. |
+| `DROP` | Red (`#bd2130`) | 1 | No connection. |
 
 ## Drawing Grid Squares
 
