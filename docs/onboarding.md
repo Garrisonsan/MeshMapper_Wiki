@@ -7,8 +7,9 @@ MeshMapper is designed to be scalable, allowing new geographic regions to be add
 Before requesting a new region, you must ensure the local infrastructure is ready to support it.
 
   - **Active Mesh Community**: There should be an active group of users in the area.
-  - **MQTT Observers**: You need at least one (preferably 2-3) nodes configured as **MQTT Clients** connected to the `letsmesh.net` broker.
+  - **MQTT Observers**: You need at least one (preferably 2-3) nodes configured as **MQTT Clients** connected to the **LetsMesh** broker, the **MeshMapper** broker, or both.
     - These nodes act as the "ears" of the map, reporting traffic to MeshMapper.
+    - See [MeshMapper MQTT Setup](mqtt-setup.md) for detailed instructions.
 
 ## The Onboarding Form
 

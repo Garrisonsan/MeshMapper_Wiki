@@ -10,6 +10,7 @@ nav:
   
   - Getting Started:
     - Onboarding New Regions: onboarding.md
+    - MeshMapper MQTT Setup: mqtt-setup.md
     - Multiregions: multiregions.md
 
   - Using the Map:
