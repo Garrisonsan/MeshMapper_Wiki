@@ -6,7 +6,7 @@ Welcome to MeshMapper, a community-driven wardriving app for MeshCore mesh netwo
 
 ## What You Need
 
-1. **A MeshCore-compatible radio device** 
+1. **A MeshCore-compatible radio device**
 — Any device that supports MeshCore will work with MeshMapper. It is recommended to run up-to-date firmware on your device, as some features require v1.14.0 or newer.
 2. **A phone or computer** — Android, iOS, or a Chromium-based browser (Chrome or Edge)
 3. **GPS/location services** enabled on your device
@@ -17,11 +17,13 @@ Welcome to MeshMapper, a community-driven wardriving app for MeshCore mesh netwo
 ## Get the App
 
 **App Store Releases:**
+
 - **Android:** [Get it on the Play Store](https://play.google.com/store/apps/details?id=net.meshmapper.app)
   - You can also grab the [APK from GitHub](https://github.com/MeshMapper/MeshMapper_Project/releases/) if you prefer sideloading
 - **iOS:** [Get it on the App Store](https://apps.apple.com/us/app/meshmapper/id6758073991)
 
 **Web (Chrome/Edge only):**
+
 - [wd.meshmapper.net](https://wd.meshmapper.net)
 - Requires Chrome or Edge (Safari is not supported, it lacks the Web Bluetooth API)
 

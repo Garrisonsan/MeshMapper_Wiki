@@ -26,6 +26,7 @@ MeshMapper communicates with your radio over **Bluetooth Low Energy (BLE)** usin
 All communication follows the **MeshCore Companion Protocol**, a binary protocol where the app sends commands and the radio responds with data or event notifications.
 
 **Platform libraries:**
+
 - Android / iOS: `flutter_blue_plus`
 - Web: `flutter_web_bluetooth`
 
@@ -76,6 +77,7 @@ RX packets aren't uploaded individually. Instead, they are **grouped by repeater
 4. The batch keeps the **original GPS location** where you first heard that repeater (the map pin doesn't follow you as you move)
 
 **The batch flushes (uploads) when either condition is met:**
+
 - You move **25m** from where you first heard the repeater, OR
 - **30 seconds** pass since the first observation
 
@@ -111,44 +113,53 @@ Trace pings target a specific repeater by hex ID:
 Every packet goes through a strict validation pipeline before being accepted. If a packet fails any step, it is dropped immediately.
 
 ### 1 Path length check
+
 - Packet must have traveled through **at least one repeater** (path length > 0)
 - Direct transmissions from nearby devices are not repeater coverage data
 
 ### 2 CARpeater ID check (optional)
+
 - If you have configured a CARpeater filter with a repeater hex ID:
   - **Single hop** from your CARpeater → **dropped** (this is just your own repeater relaying back to you, no real coverage info)
   - **Multiple hops** with CARpeater as last hop → CARpeater hop is **stripped**, second-to-last hop used as the real repeater (the packet traveled through a distant repeater first, then your CARpeater delivered it to you. The distant repeater is the real coverage data, your CARpeater just happened to be the final relay. SNR/RSSI are set to null since they reflect your CARpeater's signal, not the distant repeater's.)
 
 ### 3 RSSI check (CARpeater failsafe)
+
 - Signal must be **weaker than -30 dBm**
 - Anything stronger = device is right next to you (carpeater)
 - Acts as a safety net even without the CARpeater ID filter
 - Skipped if RSSI filter is disabled in Settings or CARpeater hop was already stripped
 
 ### 4 Packet type check
+
 - Only two types accepted:
   - **GROUP_TEXT** (0x15) — Channel messages
   - **ADVERT** (0x11) — Node advertisements
 
 ### 5 Channel hash check (GROUP_TEXT only)
+
 - Channel hash must match a **subscribed channel** (#wardriving or regional channels)
 - Prevents random mesh traffic from being counted as coverage data
 
 ### 6 Decryption (GROUP_TEXT only)
+
 - Payload decrypted with the matching channel's AES-ECB key
 - Dropped if decrypted data is too short (< 5 bytes)
 
 ### 7 Printable character check (GROUP_TEXT only)
+
 - At least **60%** of decrypted message must be printable ASCII (codes 32-126)
 - Filters corrupted packets that coincidentally have a valid channel hash
 - 60% threshold allows for emojis and Unicode in legitimate messages
 
 ### 8 ADVERT name validation (ADVERT only)
+
 - Node name must be present, non-empty, and pass the 60% printable character check
 
 ### Why this matters
 
 Without this pipeline, the coverage map would be polluted with:
+
 - **False coverage data** from CARpeaters (your own co-located repeater always reporting perfect signal)
 - **False repeater IDs** from corrupt or non-conforming packets that partially decode, causing phantom repeaters to appear in the path with garbage data
 
@@ -192,6 +203,7 @@ All wardriving data (TX, RX, DISC, Trace) flows through a single persistent uplo
 "Carpeater" (car + repeater) = a repeater mounted in/on your vehicle. Always has a very strong signal, does not provide useful coverage data.
 
 **Two filter methods:**
+
 1. **RSSI threshold**: RSSI ≥ -30 dBm → automatically dropped (device is right next to you)
 2. **User-configured repeater ID**: Specify your repeater's hex ID in Settings > Filtering > CARpeater Filter. Echoes from that repeater are stripped before upload.
 
@@ -208,6 +220,7 @@ Each packet carries a "path" showing which repeaters it traveled through, with e
 - **3 bytes**: ~16M values, maximum resolution
 
 **Key details:**
+
 - Configurable in Settings > Radio > TX Bytes (firmware 1.14+ required)
 - RX auto-detects path size regardless of your TX setting
 - Some regions enforce a specific path size via the regional admin

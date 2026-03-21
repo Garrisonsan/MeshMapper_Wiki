@@ -95,6 +95,7 @@ These show the **backend's view** of coverage, combining data from all wardriver
 If "Top Repeaters on Map" is enabled in Settings, a **Top Heard** overlay appears on the map.
 
 **Top 3 slots**: Shows the best 3 repeaters by SNR from your most recent ping, fully replacing on each new ping. If a ping gets no responses, the previous results stay visible. Each row has a colored dot indicating the ping type:
+
 - TX ping (green) - Active/Hybrid channel message
 - Discovery ping (purple) - Passive/Hybrid query
 - Trace ping (blue diamond) - Trace mode, specific repeater
@@ -106,6 +107,7 @@ Each row also shows the repeater's hex ID and SNR value, color-coded: green (goo
 The overlay clears when you stop auto-ping, switch modes, disconnect, or clear pings/logs.
 
 Example:
+
 ```
 Top Heard
 🟢 A1B2  8.5
@@ -219,6 +221,7 @@ Tap a session to open the full-screen interactive graph:
   - Trace with no response (black)
 
 **Interactions**:
+
 - **Pinch to zoom** on a specific time range (minimum 10-second visible window)
 - **Drag to pan** across the timeline
 - **Tap a marker** to open a detail sheet with event type, timestamp, interpolated noise floor, and repeater table
@@ -239,6 +242,7 @@ The Connect tab manages your Bluetooth connection. Its appearance changes based 
 ### Zone Status Bar
 
 Shown across all connection states when GPS is available:
+
 - **Left**: City name of your current zone and IATA code. If you are outside a zone, shows distance to the nearest one.
 - **Right**: Open TX slots (e.g. "3/5 Open"), color-coded: green (plenty available), orange (2 or fewer left), red (none available)
 

@@ -9,6 +9,7 @@ MeshMapper offers four automated wardriving modes plus manual pinging. Each mode
 The simplest way to wardrive. Tap the **Send Ping** button on the Map tab to send a single channel message to #wardriving.
 
 **What happens:**
+
 1. The app checks GPS, zone, and that the 15-second manual cooldown has elapsed. No minimum distance requirement for manual pings.
 2. A message containing your GPS coordinates and radio power is encrypted and sent as a channel message to #wardriving. This message **floods the entire mesh network**. If a **scope** is configured, it is scoped to that region instead.
 3. The app listens for **5 seconds** for repeater echoes
@@ -30,6 +31,7 @@ Hybrid Mode is the **recommended default** for wardriving. It alternates between
 **To start:** Tap the **Hybrid Mode** button in the Controls panel on the Map tab. (Enabled by default. If disabled in Settings, this button shows as "Active Mode" instead.)
 
 **What happens each interval (alternating):**
+
 - **1** Discovery request (direct query, does not flood the mesh)
 - **2** Channel message / TX (floods the mesh or is scoped)
 - **3** Discovery request
@@ -56,6 +58,7 @@ No channel messages (no mesh flooding at all). Sends **discovery requests** ever
 **To start:** Tap the **Passive Mode** button (hearing icon) in the Controls panel.
 
 **What happens:**
+
 1. Every 30 seconds, sends a zero-hop discovery request (direct query, not a broadcast)
 2. Repeaters/rooms respond with node type, public key, and signal quality (local + remote SNR/RSSI)
 3. Discovery Tracker collects responses during a 5-second window, deduplicates by public key, and filters carpeaters
@@ -79,6 +82,7 @@ No channel messages (no mesh flooding at all). Sends **discovery requests** ever
 Sends only channel messages (no discovery requests) at a regular interval (15, 30, or 60 seconds).
 
 **What happens each interval:**
+
 1. Checks GPS freshness and minimum distance requirement
 2. If you haven't moved far enough (based on Settings, default 25m), the ping is skipped
 3. Channel message sent (floods mesh or scoped) + 5-second echo listening window
@@ -112,11 +116,13 @@ Targets a **specific repeater** by hex ID for focused signal testing.
 Regional admins set a **maximum number of active TX wardrivers** per zone (for example, 5). This prevents too many users from flooding the mesh simultaneously.
 
 **When the zone is at capacity:**
+
 - **Manual Ping, Hybrid Mode, and Active Mode are disabled** (they all send TX channel messages)
 - **Passive Mode is the only option** (discovery requests don't flood the mesh)
 - The app indicates TX is not allowed for your session
 
 **To get a TX slot:**
+
 - Wait for another wardriver to disconnect and free up a slot
 - New sessions will be granted TX access
 - If already connected in Passive Mode, disconnect and reconnect to pick up a slot

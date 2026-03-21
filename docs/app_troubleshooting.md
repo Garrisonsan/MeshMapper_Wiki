@@ -9,12 +9,14 @@ Common issues and how to resolve them.
 ### "No devices found" when scanning
 
 **Possible causes:**
+
 - Radio is not powered on or out of BLE range (typically 10-30m)
 - Bluetooth is disabled on your phone
 - Android: Location permission not granted (required for BLE scanning)
 - Another app/device is already connected (MeshCore only supports one BLE connection at a time)
 
 **Solutions:**
+
 - Power cycle your radio and scan again
 - Move closer to the radio
 - Check Bluetooth and Location are enabled in system settings
@@ -27,6 +29,7 @@ Retrieves your radio's public key (required for API auth). If this fails, the en
 **Causes:** Firmware compatibility issue or transient BLE error
 
 **Solutions:**
+
 - Try connecting again (transient errors often resolve on retry)
 - Verify your radio runs MeshCore firmware with companion protocol support
 - Power cycle the radio if the problem persists
@@ -36,22 +39,26 @@ Retrieves your radio's public key (required for API auth). If this fails, the en
 Authenticates with the MeshMapper API.
 
 **Causes:**
+
 - No internet connection
 - MeshMapper API in maintenance mode
 
 **Solutions:**
+
 - Check internet connection
 - Use Offline Mode during maintenance
 
 ### Bluetooth disconnects unexpectedly
 
 **Causes:**
+
 - Out of Bluetooth range
 - Radio battery died
 - Transient BLE error
 - iOS: Aggressive background app management
 
 **What happens:**
+
 - Auto-reconnect up to **3 attempts** (3-second delay between each, 30-second overall timeout)
 - Session, upload queue, and noise floor data are **preserved**
 - If auto-reconnect fails → full disconnect cleanup, manual reconnect needed
@@ -63,11 +70,13 @@ Authenticates with the MeshMapper API.
 ### Status bar shows "GPS..." and never resolves
 
 **Causes:**
+
 - Location permission denied
 - GPS/Location services disabled
 - Indoors with poor reception
 
 **Solutions:**
+
 - Check location permission is granted for MeshMapper
 - Enable Location Services system-wide
 - Move to a location with clear sky view
@@ -85,6 +94,7 @@ Authenticates with the MeshMapper API.
 - Regular pings only check the 25m movement requirement
 
 **Solutions:**
+
 - Make sure GPS is actively tracking (not cached)
 - Move to improve accuracy
 - iOS: Enable Background Mode in Settings for continuous tracking
@@ -96,6 +106,7 @@ Authenticates with the MeshMapper API.
 ### "Send Ping" button is disabled
 
 Check these requirements:
+
 - **External antenna not set** — Choose Yes or No in Controls panel
 - **Power level not set** — Device model was not recognized. Go to Settings to manually select your TX power level.
 - **Not connected** — Need active Bluetooth connection
@@ -110,12 +121,14 @@ Check these requirements:
 ### "No repeaters heard" on every ping
 
 **Causes:**
+
 - No MeshCore repeaters in range
 - Antenna not connected or poorly oriented
 - Signal blocked by terrain or buildings
 - Repeaters on a different channel
 
 **Solutions:**
+
 - Try Passive/Discovery Mode to query repeaters directly
 - Check antenna connection
 - Move to a location with known repeater coverage
@@ -123,6 +136,7 @@ Check these requirements:
 ### Pings are being skipped in auto-ping mode
 
 This is **normal behavior**:
+
 - Pings skip when you haven't moved the minimum distance (default 25m)
 - If "Auto-Stop After Idle" is enabled, auto-ping stops entirely after 30 minutes without movement
 
@@ -133,11 +147,13 @@ This is **normal behavior**:
 ### Queue keeps growing but nothing uploads
 
 **Causes:**
+
 - Poor or no internet connection
 - API in maintenance mode
 - API authentication expired
 
 **Solutions:**
+
 - Check internet connection
 - Try "Force Upload" in Settings > Data > Queued Pings
 - Switch to Offline Mode during maintenance
@@ -155,11 +171,13 @@ This is **normal behavior**:
 ### No sound on ping events
 
 **Causes:**
+
 - Sound notifications disabled in Settings
 - Phone on silent/vibrate mode
 - Another app has exclusive audio focus
 
 **Solutions:**
+
 - Enable in Settings > Ping Settings > Sound Notifications
 - Check phone volume and ringer mode
 
@@ -174,13 +192,16 @@ This is **normal behavior**:
 ## Web-Specific Issues
 
 ### "Web Bluetooth not supported" error
+
 - Web Bluetooth only works in **Chrome** and **Edge**
 - Safari, Firefox, and other browsers are not supported
 
 ### CORS errors during local development
+
 - Add the web security flag: `flutter run -d chrome --web-browser-flag="--disable-web-security"`
 
 ### Web Bluetooth requires active tab
+
 - Unlike mobile, Web Bluetooth only works in the **foreground tab**
 - Switching tabs or minimizing = Bluetooth connection lost
 - No background mode for the web version
@@ -208,5 +229,6 @@ Logs include timestamped entries for BLE communication, GPS events, ping lifecyc
 4. Submit — a confirmation toast appears with a "View" link to track your report
 
 Also report issues on:
+
 - [**GitHub**](https://github.com/MeshMapper/MeshMapper_Project)
 - [**Discord**](https://discord.gg/D26P6c6QmG)
