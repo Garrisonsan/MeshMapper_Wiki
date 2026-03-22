@@ -46,6 +46,7 @@ nav:
   
   - Support:
     - Report Bugs & Features: reportbugs.md
+    - System Status: systemstatus.md
 
   - Wardriving App:
     - Overview: app_overview.md
