@@ -34,8 +34,8 @@ Below the app bar is the status bar with tappable stat chips:
 
 - **Zone chip** (left): Your current zone code. Tap for details. The popup changes based on your state: zone name and TX slots available (green), zone at TX capacity with Passive Mode suggestion (red), distance to nearest zone (orange), or "Connect to a device to start wardriving" (grey, when in zone but not connected).
 - **TX** (green): Channel messages you have sent. These are flood messages that propagate across the mesh (or are regionally scoped if your zone admin has set a scope).
-- **RX** (blue): Mesh packets passively received.
-- **DISC** (purple): Discovery requests sent.
+- **RX** (purple): Mesh packets passively received.
+- **DISC** (cyan): Discovery requests sent.
 - **TRC** (blue diamond): Successful trace responses.
 - **Upload**: Pings successfully uploaded to the server.
 
@@ -75,8 +75,8 @@ These show what **your device** observed locally over BLE. The app only knows wh
 
 - **TX (success)** (green): You sent a channel message (flood) and at least one repeater echoed it back
 - **TX (fail)** (red): You sent a channel message but no repeater was heard
-- **RX** (blue): You passively received a message from the mesh
-- **DISC (success)** (purple): You sent a discovery request and a repeater responded
+- **RX** (purple): You passively received a message from the mesh
+- **DISC (success)** (cyan): You sent a discovery request and a repeater responded
 - **DISC (fail)** (black/red): You sent a discovery request but no repeater responded. Shown as red if your region has "Count DISC as failed" enabled, meaning the backend will track a failed discovery as no coverage at that location.
 - **TRC (success)** (blue diamond): A trace reached the target repeater
 - **TRC (fail)** (black): A trace got no response
@@ -86,7 +86,7 @@ These show what **your device** observed locally over BLE. The app only knows wh
 These show the **backend's view** of coverage, combining data from all wardrivers and MQTT observers across the entire mesh. The backend has information your device does not, such as whether a message was received by an MQTT observer on the other side of the mesh. This is why the overlay uses different categories than your session markers.
 
 - **BIDIR** (green): Heard repeats from the mesh AND successfully routed through to a backend observer
-- **DISC** (blue): A wardriver sent a discovery packet and heard a reply
+- **DISC** (cyan): A wardriver sent a discovery packet and heard a reply
 - **TX** (orange): Successfully routed through to a backend observer, but no repeats heard back by the wardriver
 - **RX** (purple): Heard mesh traffic but did not transmit
 - **DEAD** (brown): A repeater heard it, but no other radio received the repeat
@@ -97,10 +97,10 @@ If "Top Repeaters on Map" is enabled in Settings, a **Top Heard** overlay appear
 **Top 3 slots**: Shows the best 3 repeaters by SNR from your most recent ping, fully replacing on each new ping. If a ping gets no responses, the previous results stay visible. Each row has a colored dot indicating the ping type:
 
 - TX ping (green) - Active/Hybrid channel message
-- Discovery ping (purple) - Passive/Hybrid query
+- Discovery ping (cyan) - Passive/Hybrid query
 - Trace ping (blue diamond) - Trace mode, specific repeater
 
-**RX slot**: A 4th row shows the strongest passively overheard repeater (blue) within a rolling window that matches your auto-ping interval (15s, 30s, or 60s).
+**RX slot**: A 4th row shows the strongest passively overheard repeater (purple) within a rolling window that matches your auto-ping interval (15s, 30s, or 60s).
 
 Each row also shows the repeater's hex ID and SNR value, color-coded: green (good, above 5), orange (okay, -1 to 5), red (poor, below -1).
 
@@ -148,7 +148,7 @@ A unified chronological view of every TX, RX, DISC, and Trace event. At the top:
 
 Each entry is a card showing:
 
-- **Type badge**: Color-coded label (green TX, blue RX, purple DISC, blue diamond TRC). TX entries are channel messages that flooded the mesh (or were regionally scoped).
+- **Type badge**: Color-coded label (green TX, purple RX, cyan DISC, cyan diamond TRC). TX entries are channel messages that flooded the mesh (or were regionally scoped).
 - **Timestamp**: When the event occurred
 - **Location**: GPS coordinates at the time of the event
 - **Repeater table**:
@@ -214,8 +214,8 @@ Tap a session to open the full-screen interactive graph:
 - **Event markers**: Colored dots marking when ping events occurred:
   - TX channel message (green) - heard by a repeater (success)
   - TX channel message (red) - not heard
-  - Passive RX received (blue)
-  - Discovery got a response (purple)
+  - Passive RX received (purple)
+  - Discovery got a response (cyan)
   - Discovery with no response (black) - or failed discovery if "Count DISC as failed" is enabled at the region level
   - Trace got a response (blue diamond)
   - Trace with no response (black)
