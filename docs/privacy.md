@@ -1,6 +1,6 @@
 # Privacy Notice
 
-**Last Updated:** February 27, 2026
+**Last Updated:** March 23, 2026
 
 MeshMapper ("we", "us", or "our") operates the MeshMapper platform at meshmapper.net and its associated regional subdomains. This Privacy Notice explains how we collect, use, and protect your information when you use our services.
 
@@ -59,6 +59,7 @@ MeshMapper integrates with the following third-party services:
 - **CARTO** for dark mode map tiles ([CARTO Privacy Policy](https://carto.com/privacy/))
 - **OpenTopoMap** for topography tiles ([OpenTopoMap](https://opentopomap.org/))
 - **Esri** for satellite imagery — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-GP, and the GIS User Community ([Esri Privacy Policy](https://www.esri.com/en-us/privacy/overview))
+- **REST Countries** for country code lookup during region onboarding ([REST Countries](https://restcountries.com))
 - **Nominatim** for geocoding / location search ([Nominatim Usage Policy](https://operations.osmfoundation.org/policies/nominatim/))
 - **OpenStreetMap** for map data ([OpenStreetMap Privacy Policy](https://wiki.osmfoundation.org/wiki/Privacy_Policy))
 - **LetsMesh.net** as the MQTT broker for wardriving data ingestion ([LetsMesh](https://letsmesh.net/))
@@ -66,7 +67,7 @@ MeshMapper integrates with the following third-party services:
 ## Data Retention
 
 - Coverage and session data is retained indefinitely to maintain historical map accuracy.
-- You may request deletion of your data by contacting us at admin@meshmapper.net.s
+- You may request deletion of your data by contacting us at admin@meshmapper.net.
 
 ## Your Rights
 
