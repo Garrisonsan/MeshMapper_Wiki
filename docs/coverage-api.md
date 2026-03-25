@@ -4,9 +4,12 @@ The Coverage API provides programmatic access to MeshMapper coverage grid-square
 
 ## Authentication
 
-Access requires a **Coverage** API key provisioned by a Master administrator. Each key is scoped to a specific region or multiregion group and has a daily rate limit.
+Access requires a **Coverage** API key provisioned by the MeshMapper developers. Each key is scoped to a specific region or multiregion group and has a daily rate limit.
 
-To request a key, contact a Master administrator.
+To request a key, contact one of the MeshMapper developers.
+
+!!! warning "Unauthorized Access"
+    MeshMapper utilizes API keys and rate limits to protect server resources and prevent access to data that regions do not wish to have shared externally.  As such, accessing unauthorized API's, scraping for data, etc., is strictly prohibited and will result in action taken to protect the server and data (which may include IP or origin bans, removal of a region, etc.).  The MeshMapper team is happy to review requests for data not provided in the API's below.
 
 ## Endpoint
 
