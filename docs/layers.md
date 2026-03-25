@@ -8,7 +8,7 @@ You can switch between different underlying map styles using the **Layer Control
 
   - **Standard**: The default view. Best for general navigation and street names.
   - **Topographic**: Displays terrain features, elevation lines, and hill shading. Extremely useful for understanding line-of-sight (LOS) obstructions between repeaters.
-  - **Dark Mode**: A high-contrast dark theme. Ideal for low-light viewing or when you want the colored data points to stand out clearly.
+  - **Dark Mode**: A high-contrast dark theme. Ideal for low-light viewing or when you want the coloured data points to stand out clearly.
   - **Satellite**: Aerial imagery. Useful for verifying physical locations, tree cover, and landmarks.
 
 *Note: Your selected base layer is saved in your browser and will be remembered the next time you visit.*
@@ -32,13 +32,17 @@ The **Settings** menu (gear icon in the navigation bar) provides global options 
 
 ### Effective Coverage
 
-*   **Color Spectrum**: Toggle between **Red → Green** (default) and **Red → Blue** (full spectrum) for the Effective Coverage layer.
+*   **Colour Spectrum**: Toggle between **Red → Green** (default) and **Red → Blue** (full spectrum) for the Effective Coverage layer.
 *   **Min Sample Size**: Set the minimum number of pings required in a grid square before it is displayed on the map (default: 1). Increasing this value filters out grid squares with limited data, giving a cleaner view of well-sampled areas.
 
 ### Grid Transparency
 
 *   **Normal Opacity**: Adjust the fill opacity of coverage grid squares (default: 60%).
 *   **Faded Opacity**: Adjust the opacity of grid squares that are faded into the background, such as when the Repeater Neighbours layer is active (default: 15%).
+
+### Line Transparency
+
+*   **Line Opacity**: Adjust the opacity of all lines drawn on the map — including repeater neighbour lines, repeater-to-grid-square lines, and ping-to-repeater lines (default: 100%).
 
 ## Overlay Layers
 
@@ -54,10 +58,11 @@ These layers display the actual mesh network data. You can toggle them on or off
 | **DROP** | **Red** grid squares showing failed pings (no route, no repeats). |
 | **Repeaters** | The icons representing repeater nodes. |
 | **Repeater Coverage** | When a repeater is clicked, this layer draws dashed blue lines to all locations where that repeater was heard. Useful for visualizing the effective footprint of a specific repeater. |
-| **Adv. Repeater Coverage** | Similar to standard Repeater Coverage, but color-codes the lines and grid squares based on the connection type (Green=BIDIR, Orange=TX, etc.) instead of using a uniform blue. Lines are labelled as **In** or **Out** to indicate whether the ping originated inside or outside the region boundary. |
-| **Repeater Neighbours** | Draws lines between repeaters that have heard each other directly. When enabled, coverage pings fade into the background to make the neighbour lines easier to trace. <br> - **Green Dashed**: Heard recently (< 2 weeks). <br> - **Orange Dashed**: Heard 2-4 weeks ago. <br> - **Red Solid**: Stale link (> 4 weeks). |
+| **Adv. Repeater Coverage** | Similar to standard Repeater Coverage, but colour-codes the lines and grid squares based on the connection type (Green=BIDIR, Orange=TX, etc.) instead of using a uniform blue. Lines are labelled as **In** or **Out** to indicate whether the ping originated inside or outside the region boundary. |
+| **Repeater Neighbours** | Draws lines between repeaters that have heard each other directly, with full support for multi-byte repeater identification. When enabled, coverage pings fade into the background to make the neighbour lines easier to trace. Lines older than 7 days are automatically hidden. <br> - **Green Dashed**: Heard recently (&le; 3 days). <br> - **Orange Solid**: Heard 4-7 days ago. |
 | **Effective Coverage** | Filters the map to show only locations with confirmed reliable connectivity, removing noise and edge-case pings for a cleaner view of where the mesh truly delivers. Each ping type is given a numerical value (BIDIR being the highest and DROP being the lowest) and these values are averaged across each grid square.|
-| **Signal Strength** | Color-codes coverage grid squares by signal strength (SNR), making it easy to identify strong and weak zones across the map at a glance. ≤ -1 dB displays in red and ≥ 5 dB in green, with everything else in between. |
+| **Signal Strength** | Colour-codes coverage grid squares by signal strength (SNR), making it easy to identify strong and weak zones across the map at a glance. ≤ -1 dB displays in red and ≥ 5 dB in green, with everything else in between. |
+| **Ping Age** | Colour-codes grid squares based on how recently they were last pinged. Green indicates recent activity and red indicates stale coverage. The green and red age thresholds are adjustable from the Settings panel, making it easy to identify areas that may need remapping. |
 | **Noise Heatmap** | A visual heatmap representing the RF noise environment. **Red** areas indicate high interference, while **Blue** areas are quieter. See [Noise Heatmap](#noise-heatmap) below for details. |
 | **Neighbor Zones** | Small pins showing the location of nearby MeshMapper regions. Clicking them will take you to that map. |
 | **Neighbour Zone Boundaries** | Draws a dashed outline showing the official boundary (polygon or radius) of each neighbouring region. Requires **Neighbor Zones** to be enabled — it will be automatically turned off when Neighbor Zones is disabled, and restored when it is re-enabled. |
@@ -86,11 +91,11 @@ For example, if your companion's baseline is **-110 dBm** and you submit a readi
 
 This per-companion calibration ensures that readings from different hardware/setups are comparable on the same map.  All readings for a single location are averaged and displayed accordingly.
 
-#### Reading the Colors
+#### Reading the Colours
 
-The heatmap uses a gradient from cool to warm colors:
+The heatmap uses a gradient from cool to warm colours:
 
-| Color | Meaning |
+| Colour | Meaning |
 | --- | --- |
 | **Blue** | Quiet — at or near the companions's baseline noise level. |
 | **Green / Lime** | Moderate — some elevated noise above baseline. |
@@ -105,6 +110,22 @@ The heatmap uses a gradient from cool to warm colors:
 ### Legacy Data Layer
 
 Regions with imported historical data will have a **Legacy** layer available. This layer displays data points uploaded via CSV but does not show connection lines or contribute to repeater statistics due to the lack of verifiable repeater association. See [Data Upload](https://wiki.meshmapper.net/dataupload/) for more details.
+
+## Map Tools
+
+### Line of Sight
+
+The **Line of Sight** tool is available from the map toolbar and allows you to check terrain clearance between two points on the map. Click to place two points (or click directly on repeaters) and MeshMapper will fetch the elevation profile and show whether the path is clear or obstructed. When a repeater is selected as one of the endpoints, you can adjust its elevation above ground for more accurate results.
+
+### View in 3D (Beta)
+
+Region maps can be viewed in 3D. Available from the **Map Mode** section of the Layer Control, this opens a 3D globe view centered on the current map position with coverage data overlaid on terrain. This feature is currently in beta.
+
+### Packet Analyzer
+
+The **Packet Analyzer** provides a real-time view of raw MeshCore packets flowing through the region's MQTT observers. It is accessible from the map toolbar. The analyzer can be opened in a new tab for a full-screen experience using the pop-out button.
+
+The **Live Visualization** mode (accessed via the "Visualize Live" button in the analyzer) draws animated lines on the map showing how packets are moving through the region's repeaters in real time.
 
 ## Search & Filters
 

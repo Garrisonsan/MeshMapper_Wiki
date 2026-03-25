@@ -1,14 +1,14 @@
 # Map Grid, Ping Types & Popups
 
-MeshMapper visualizes mesh coverage using a grid system, color-coded markers, and detailed popups. This guide explains how to interpret the map data.
+MeshMapper visualizes mesh coverage using a grid system, colour-coded markers, and detailed popups. This guide explains how to interpret the map data.
 
 ## The Grid System
 
 The map is divided into small grid squares. The default grid size is **300m x 300m** in Simplified mode and **100m x 100m** in Detailed mode, but this can be changed via the **Grid Size** option in the Settings panel (sizes range from 50m up to 2km).
 
-Since a single grid square may contain multiple pings from different times or users, MeshMapper uses a **Priority System** to determine which color to display. The map will always show the "best" result available for that location.
+Since a single grid square may contain multiple pings from different times or users, MeshMapper uses a **Priority System** to determine which colour to display. The map will always show the "best" result available for that location.
 
-| Priority | Color | Meaning |
+| Priority | Colour | Meaning |
 | --- | --- | --- |
 | **1 (Highest)** | **Green** | **BIDIR** (Bidirectional) - Confirmed two-way coverage. |
 | **2** | **Cyan** | **DISC** (Discovery) - Discovery packet sent and reply heard. |
@@ -74,7 +74,7 @@ You can cycle through individual pings using the **<** and **>** buttons at the 
 ### 3. Visual Lines
 When a popup is open, MeshMapper draws lines on the map to visualize the connection:
 
-  - **Solid Colored Line**: Represents the signal your radio **Heard** from a repeater. The color indicates signal strength (Green = Good, Orange = Okay, Red = Weak).
+  - **Solid Coloured Line**: Represents the signal your radio **Heard** from a repeater. The colour indicates signal strength (Green = Good, Orange = Okay, Red = Weak).
   - **Blue Dashed Line**: Represents the one-way **Via** path.
   - **Red Dashed Line**: Indicates a connection to a **Duplicate/Excluded** repeater.
 
@@ -102,6 +102,7 @@ Clicking on a repeater icon opens a popup with details:
     - **Excluded (Red)**: Flagged as a duplicate or problematic node.
   - **Details**:
     - **ID**: The repeaters identifier.
+    - **First Heard**: The date the repeater was first discovered by MeshMapper.
     - **Last Heard**: The exact time the repeater was last seen by the mesh.
     - **Max Range**: The furthest distance a user has successfully connected to this repeater from.
   - **Neighbours**: A list of other repeaters this node has directly communicated with recently.

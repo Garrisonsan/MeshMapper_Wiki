@@ -65,8 +65,8 @@ GET https://meshmapper.net/coverage.php?key=YOUR_API_KEY
 | `grid_id` | string | Unique identifier for the grid cell in `"latIndex_lonIndex"` format. |
 | `bounds` | object | Bounding box with `south`, `west`, `north`, `east` in decimal degrees. |
 | `coverage_type` | string | One of: `BIDIR`, `TX`, `RX`, `DISC`, `DEAD`, `DROP`. |
-| `fill_color` | string | Hex fill color matching MeshMapper's map rendering. |
-| `border_color` | string | Hex border color matching MeshMapper's map rendering. |
+| `fill_color` | string | Hex fill colour matching MeshMapper's map rendering. |
+| `border_color` | string | Hex border colour matching MeshMapper's map rendering. |
 | `snr` | float or null | Signal-to-noise ratio of the dominant ping, if available. |
 | `timestamp` | integer or null | Unix timestamp of the ping colouring this grid square. |
 
@@ -74,7 +74,7 @@ GET https://meshmapper.net/coverage.php?key=YOUR_API_KEY
 
 When multiple pings exist in the same grid square, the highest-priority type wins.
 
-| Type | Color | Priority | Description |
+| Type | Colour | Priority | Description |
 | --- | --- | --- | --- |
 | `BIDIR` | Green (`#1e7e34`) | 6 | Two-way confirmed link. |
 | `DISC` | Cyan (`#17a2b8`) | 5 | Discovery or trace packet. |

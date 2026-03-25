@@ -19,7 +19,7 @@ The Map tab is your primary wardriving interface. It shows a full-screen map wit
 In portrait orientation, the top bar shows:
 
 - **"MeshMapper"** with your connected device name below it (or "Disconnected")
-- **Noise floor indicator** (right): Current noise floor in dBm with color coding
+- **Noise floor indicator** (right): Current noise floor in dBm with colour coding
   - Below -100 dBm: great (green)
   - -100 to -90 dBm: okay (orange)
   - Above -90 dBm: noisy (red)
@@ -47,7 +47,7 @@ The map shows your current position and wardriving data.
 
 #### GPS Info Overlay (Top Left)
 
-- **GPS accuracy**: Color-coded readout in meters (or feet if imperial is enabled)
+- **GPS accuracy**: Colour-coded readout in meters (or feet if imperial is enabled)
   - 10m or better (green)
   - 10-30m (orange)
   - Worse than 30m (red)
@@ -63,7 +63,7 @@ Expand the map controls panel to access:
 - **Auto-Follow**: Centers the map on your GPS position as you move
 - **Always North**: Keeps north at the top. When disabled, the map can rotate with your heading.
 - **Rotation Lock**: Disables rotation gestures entirely
-- **Legend**: Opens a legend showing what the map markers and colors mean
+- **Legend**: Opens a legend showing what the map markers and colours mean
 
 #### Markers
 
@@ -94,7 +94,7 @@ These show the **backend's view** of coverage, combining data from all wardriver
 
 If "Top Repeaters on Map" is enabled in Settings, a **Top Heard** overlay appears on the map.
 
-**Top 3 slots**: Shows the best 3 repeaters by SNR from your most recent ping, fully replacing on each new ping. If a ping gets no responses, the previous results stay visible. Each row has a colored dot indicating the ping type:
+**Top 3 slots**: Shows the best 3 repeaters by SNR from your most recent ping, fully replacing on each new ping. If a ping gets no responses, the previous results stay visible. Each row has a coloured dot indicating the ping type:
 
 - TX ping (green) - Active/Hybrid channel message
 - Discovery ping (cyan) - Passive/Hybrid query
@@ -102,7 +102,7 @@ If "Top Repeaters on Map" is enabled in Settings, a **Top Heard** overlay appear
 
 **RX slot**: A 4th row shows the strongest passively overheard repeater (purple) within a rolling window that matches your auto-ping interval (15s, 30s, or 60s).
 
-Each row also shows the repeater's hex ID and SNR value, color-coded: green (good, above 5), orange (okay, -1 to 5), red (poor, below -1).
+Each row also shows the repeater's hex ID and SNR value, colour-coded: green (good, above 5), orange (okay, -1 to 5), red (poor, below -1).
 
 The overlay clears when you stop auto-ping, switch modes, disconnect, or clear pings/logs.
 
@@ -148,7 +148,7 @@ A unified chronological view of every TX, RX, DISC, and Trace event. At the top:
 
 Each entry is a card showing:
 
-- **Type badge**: Color-coded label (green TX, purple RX, cyan DISC, cyan diamond TRC). TX entries are channel messages that flooded the mesh (or were regionally scoped).
+- **Type badge**: Colour-coded label (green TX, purple RX, cyan DISC, cyan diamond TRC). TX entries are channel messages that flooded the mesh (or were regionally scoped).
 - **Timestamp**: When the event occurred
 - **Location**: GPS coordinates at the time of the event
 - **Repeater table**:
@@ -159,7 +159,7 @@ Each entry is a card showing:
 
 **Tapping a card** navigates to the Map tab and centers on that event's GPS coordinates.
 
-**Tapping a repeater ID** in any table opens a popup showing matching repeaters from the mesh database. Each match shows the repeater's name, a colored hex ID badge, distance from your current GPS position (sorted closest first), and an Active/Stale status badge. For discovery pings, the popup uses exact 4-byte public key matching for precise identification. For TX/RX pings (which only have 1-byte path IDs), it uses prefix matching, so multiple repeaters may appear if they share the same first byte.
+**Tapping a repeater ID** in any table opens a popup showing matching repeaters from the mesh database. Each match shows the repeater's name, a coloured hex ID badge, distance from your current GPS position (sorted closest first), and an Active/Stale status badge. For discovery pings, the popup uses exact 4-byte public key matching for precise identification. For TX/RX pings (which only have 1-byte path IDs), it uses prefix matching, so multiple repeaters may appear if they share the same first byte.
 
 ### Errors
 
@@ -210,8 +210,8 @@ The currently active session appears at the top with a green **"LIVE"** badge.
 
 Tap a session to open the full-screen interactive graph:
 
-- **Noise floor line**: Color-coded by level (green/orange/red) over time
-- **Event markers**: Colored dots marking when ping events occurred:
+- **Noise floor line**: Colour-coded by level (green/orange/red) over time
+- **Event markers**: Coloured dots marking when ping events occurred:
   - TX channel message (green) - heard by a repeater (success)
   - TX channel message (red) - not heard
   - Passive RX received (purple)
@@ -244,7 +244,7 @@ The Connect tab manages your Bluetooth connection. Its appearance changes based 
 Shown across all connection states when GPS is available:
 
 - **Left**: City name of your current zone and IATA code. If you are outside a zone, shows distance to the nearest one.
-- **Right**: Open TX slots (e.g. "3/5 Open"), color-coded: green (plenty available), orange (2 or fewer left), red (none available)
+- **Right**: Open TX slots (e.g. "3/5 Open"), colour-coded: green (plenty available), orange (2 or fewer left), red (none available)
 
 ### Disconnected
 
