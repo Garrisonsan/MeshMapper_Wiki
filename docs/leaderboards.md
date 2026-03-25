@@ -54,7 +54,7 @@ The [Global Leaderboard](https://meshmapper.net/global_leaderboard.php) aggregat
   - **Global Stats**: Combined totals across all regions — data points, ping breakdowns, repeater count, contributors, and total grid squares.
   - **Top Contributors (7 Days)** and **All Time Legends**: Cross-region user rankings with each user's primary region shown.
   - **Top Explorers**: Aggregated first-mapper grid square counts across all regions.
-  - **Best Repeaters (Ping Count)** and **Best Repeaters (Max Range)**: Repeater rankings drawn from every region, with links back to the originating regional map.
+  - **Best Repeaters (Ping Count)** and **Best Repeaters (Max Range)**: Repeater rankings drawn from every region, with links back to the originating regional map. The Ping Count table includes unique grid square counts alongside total ping counts — click the column headers to sort by either metric.
 
 Each user's **primary region** is determined by where they have contributed the most data points.
 

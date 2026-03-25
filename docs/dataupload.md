@@ -22,7 +22,7 @@ You may also include any number of additional columns (e.g., `Repeater`, `RSSI`,
 
 The `status` column should contain an integer representing the coverage type, consistent with MeshMapper's standard ping types:
 
-| Value | Type | Color | Description |
+| Value | Type | Colour | Description |
 | :--- | :--- | :--- | :--- |
 | **0** | **DROP** | **Red** | **Drop** - Failed ping. No repeats heard and did not make it into the wider mesh. |
 | **1** | **BIDIR** | **Green** | **Bidirectional** - Confirmed two-way coverage. |

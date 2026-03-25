@@ -32,7 +32,7 @@ This tab allows granular control over individual data points (pings).
 ### Repeaters
 Manage the repeaters database.
 
-  - **Add/Edit:** Manually register repeaters or update their details (Name, Location, Power).
+  - **Add/Edit:** Manually register repeaters or update their details (Name, Location, Power, Hop Bytes).
   - **Status Control:**
     - **Active:** The default state. The repeater is visible on the map, included in leaderboards, and actively associating with coverage pings.
     - **Disabled:** The repeater is hidden from the public map and leaderboards but remains in the database for historical purposes.
@@ -48,6 +48,7 @@ Manage the repeaters database.
         This is a safety mechanism designed to protect the integrity of the map's data. To resolve this, one of the colliding repeaters must change its ID.  If a repeater that was once a duplicate is no longer physically on the mesh, deleting the repeater will ensure collision detection logic will not trigger for surviving repeaters.
 
   - **Ping Calc:** A tool to recalculate the total number of pings a repeater has handled.
+  - **Neighbours Cleanup:** Reset the neighbours list for any repeater in the region. Useful for clearing stale or incorrect neighbour associations.
   - **Notes:** Clicking the note icon will allow you to optionally add a note to the repeater.  On multiregion admin panels, if a repeater belongs to multiple single regions, notes will be combined and edits will be saved to the individual regions.
   - **Lock GPS Coordinates:** Enabling this setting will prevent new adverts from a repeater from updating its location.  This can be used in instances where the GPS coordinates set on the repeater are incorrect and need to be manually overridden.
   - **Bulk Select & Edit/Delete:** Use the checkboxes on each row (or the "Select All" checkbox in the header) to select multiple repeaters. A toolbar will appear at the bottom of the screen with options to **Edit Selected** or **Delete Selected**. Bulk edit allows you to change Status, Power, Lock GPS, and Notes for all selected repeaters at once — each field has an "Apply" checkbox so you only change the fields you intend to. Works across multi-region admin panels.
@@ -111,6 +112,7 @@ Four metric cards are displayed at the top of the tab:
     Only 1 broker per observer is required to submit data to MeshMapper.  Data received from both brokers will aggregate.
 
   - **Notifications**: A toggle to mute or unmute offline Discord notifications for this observer. Muting suppresses notifications only — data collection is unaffected.
+  - **Remove**: Administrators can remove stale or inactive observers from the list.  Note that if the observer starts sending packets again, it will automatically be re-added.
 
 !!! info "Observer Data Source"
     Observer data is aggregated from coverage, repeater, and companion records over the last 30 days. Observers will appear here automatically once they begin reporting data.
@@ -178,7 +180,7 @@ Configure how the map behaves for your region.
     !!! warning "Data Inaccuracy Warning"
         New repeaters will not display on the map until approved. This can cause data inaccuracies. Use with caution.
 
-  - **Hop Bytes**: Configure the region's repeater identification byte length — 1-byte (256 IDs), 2-byte (65K IDs), or 3-byte (16M IDs). When set to 2 or 3-byte, companion devices connecting to wardrive sessions are automatically configured to use the enforced hop byte length. In 1-byte regions, MeshMapper passively detects which repeaters support multi-byte by watching packets and only confirmed repeaters will show multi-byte IDs on the map. Collision detection, coverage mapping, and leaderboards all respect the configured hop byte length. Requires MeshCore firmware v1.14.0+.
+  - **Hop Bytes**: Configure the region's repeater identification byte length — 1-byte (256 IDs), 2-byte (65K IDs), or 3-byte (16M IDs). When set to 2 or 3-byte, companion devices connecting to wardrive sessions are automatically configured to use the enforced hop byte length. In 1-byte regions, MeshMapper passively detects which repeaters support multi-byte by watching packets and only confirmed repeaters will show multi-byte IDs on the map. Collision detection, coverage mapping, and leaderboards all respect the configured hop byte length. Changing the byte mode automatically recalculates repeater collisions and updates affected repeaters to Active status. Requires MeshCore firmware v1.14.0+.
   - **Single Observer Mode**: Enable this if your region relies on a single MQTT ingestor to prevent repeaters from being flagged as "Stale" too quickly. This option prevents the repeater from displaying as stale and ultimately getting disabled at 30 days without an advert.
   - **Public Channels**: Define which channels are treated as public traffic.
   - **Regions/Scopes**: If your region uses MeshCore Regions/Scopes, define it here.  If not, leave the default scope of "*".
