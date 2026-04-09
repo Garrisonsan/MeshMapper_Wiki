@@ -88,7 +88,7 @@ If you're having trouble with MeshMapper, you're in the right place. Browse the 
 If you can't find the answer here, there are several ways to get support:
 
 - **Wiki**: Browse the full wiki documentation.
-- **AI Bot**: The MeshMapper AI bot on Discord can answer many questions. Send it a DM, tag it in a public message, or reply to a message and tag it.
+- **AI Bot (@MeshMapper)**: The MeshMapper AI bot on Discord can answer many questions. Send it a DM, tag it in a public message, or reply to a message and tag it.
 - **Discord Community**: The MeshMapper community on Discord is knowledgeable and very helpful. Post your question in the appropriate channel and someone will be able to help you out.
 - **Region Administrator**: For issues specific to your region (settings, configuration, etc.), reach out to your [region's administrator](https://wiki.meshmapper.net/administratorlist/). If they're unavailable, tag a `@Moderator` in the MeshMapper Discord server. Moderators (also known as Global Administrators) have access to assist any region.
 
