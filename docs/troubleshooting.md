@@ -10,7 +10,7 @@ If you're having trouble with MeshMapper, you're in the right place. Browse the 
     Repeaters appear on the map once their adverts are heard through a connected observer. Try the following:
 
     - Force an advert from your repeater.
-    - Confirm the region has at least one active observer by checking **Region Info > Observers** from the map.  A repeaters advert must be picked up by one of these observers.
+    - Confirm the region has at least one active observer by checking **Region Info > Observers** from the map.  A repeaters advert must be picked up by one of these observers.  If observers are missing, contact your region's administrator, as they may have a whitelist of observers from which to ingest from configured.
     - If the repeater or observer was recently added, give it a few minutes to be picked up.
 
     If your repeater or room server is also an observer, it may not "hear" its own advert.  Another observer must be within range in order to ingest it's advert and display on the map.  If there are no other observers nearby, you can mimic the repeaters advert from a companion by using the MeshCore app, select the ellipses beside the repeater, select "Share", and then select "Zero Hop Advert".
