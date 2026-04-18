@@ -162,7 +162,7 @@ This is **normal behavior**:
 ### Data uploaded but not appearing on meshmapper.net
 
 - Server-side processing may take a few minutes
-- Check the [MeshMapper Discord](https://discord.gg/D26P6c6QmG) for status updates if data still doesn't appear
+- Check the [MeshMapper Discord](https://discord.gg/tyXbecdxgr) for status updates if data still doesn't appear
 
 ---
 
@@ -231,4 +231,4 @@ Logs include timestamped entries for BLE communication, GPS events, ping lifecyc
 Also report issues on:
 
 - [**GitHub**](https://github.com/MeshMapper/MeshMapper_Project)
-- [**Discord**](https://discord.gg/D26P6c6QmG)
+- [**Discord**](https://discord.gg/tyXbecdxgr)
