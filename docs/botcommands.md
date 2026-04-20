@@ -36,7 +36,12 @@ In addition to commands, you can tag the bot with any question about MeshMapper 
 
 The bot can also be messaged directly (DM) without needing to tag it.
 
+## Commenting on Issues
+
+After submitting a bug report or feature request, anyone can add comments to the GitHub issue by simply replying to the bot's response message in Discord. The bot will automatically add your reply as a comment on the corresponding GitHub issue, with a link back to your Discord message. A ✅ reaction confirms the comment was added successfully.
+
 ## Notes
 
 - All commands require the bot to be tagged (e.g. `@MeshMapper !status YOW`), except in DMs where tagging is not required.
 - When submitting bugs or features by replying to a message, the "Submitted by" field credits the original poster, not the person who tagged the bot.
+- Replying to a bug or feature request does not require tagging the bot.
