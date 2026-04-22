@@ -92,6 +92,9 @@ Often, a collision occurs because an old, offline repeater is still in the datab
   - If one of the colliding repeaters has not been heard from in **3× the region's configured Stale Repeater Age** (e.g., 72 hours at the default 24-hour setting), it is considered gone and is automatically deleted.
   - **The Survivor**: Once the duplicate ID is removed, the remaining active repeater is automatically restored to **Active** status. Its icon will turn back to normal, it will reappear on Leaderboards, and new incoming pings will properly associate themselves with this repeater again.
 
+!!! tip "Bypass Auto Delete"
+    If a repeater is known to go offline for extended periods (seasonal deployment, remote location, etc.), administrators can enable **Bypass Auto Delete** on that repeater via the edit modal. This prevents the cleanup routine from removing or deactivating it, even if it hasn't been heard within the stale timer.
+
 ### Manual Resolution
 If both repeaters are active and legitimate (a true collision between two live devices):
 
