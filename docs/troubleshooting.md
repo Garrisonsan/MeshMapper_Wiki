@@ -37,10 +37,13 @@ If you're having trouble with MeshMapper, you're in the right place. Browse the 
     - **Standard**: Colours represent ping type (green=BIDIR, orange=TX, purple=RX, etc.)
     - **Effective Coverage**: Averaged quality score (green=high quality, red=low quality)
     - **Signal Strength**: Based on SNR (green=strong, red=weak)
-    - **Ping Age**: Based on data recency (green=recent, red=stale)
+    - **Ping Age**: Based on data recency (green=recent, red=stale)(green
     - **Noise Floor**: Based on RF noise relative to each companion's baseline (green=quiet, red=loud)
 
     Check which mode is selected in the **Coverage Mode** section of the Layer Control.
+
+??? question "I'm not seeing repeater neighbours, or the associations are old (orange)."
+    MeshMapper determines a repeater's neighbours using the hop information contained in repeater adverts, contact adverts, or wardriving pings. These packets will need to travel between two or repeaters before getting ingested by an observer.  For example, an advert that goes directly from repeater to observer has no hops, therefore no neighbour information is available.  However, if that same advert hops to a different repeater first and then to the observer, one neighbour association can be made.  The more observers and repeaters a region has, the greater the possibility packets will jump around between repeaters and record hop/neighbour information.
 
 ---
 
