@@ -6,6 +6,7 @@ If you're having trouble with MeshMapper, you're in the right place. Browse the 
 
 ## Map & Coverage
 
+<div id="repeater-not-showing" markdown>
 ??? question "My repeater isn't showing on the map."
     Repeaters appear on the map once their adverts are heard through a connected observer. Try the following:
 
@@ -19,10 +20,14 @@ If you're having trouble with MeshMapper, you're in the right place. Browse the 
     If your repeater or room server is also an observer, it may not "hear" its own advert.  Another observer must be within range in order to ingest it's advert and display on the map.  If there are no other observers nearby, you can mimic the repeaters advert from a companion by using the MeshCore app, select the ellipses beside the repeater, select "Share", and then select "Zero Hop Advert".  When this is the case, however, this repeater will eventually become stale and get removed.  This process must be repeated regularly.
 
     If it still doesn't appear, contact your region's administrator.
+</div>
 
+<div id="repeater-excluded" markdown>
 ??? question "My repeater shows as Excluded or Duplicate."
     As a region's mesh network grows, the likelihood of two repeaters sharing the same short ID increases. MeshMapper detects these collisions and disables affected repeaters to protect data integrity. See [Duplicate Repeater IDs](https://wiki.meshmapper.net/duplicaterepeaterid/) for a full explanation and resolution steps.
+</div>
 
+<div id="map-slow" markdown>
 ??? question "The map is slow or unresponsive on my device."
     Large regions with lots of data can be demanding on older devices or slow connections. Try the following:
 
@@ -30,7 +35,9 @@ If you're having trouble with MeshMapper, you're in the right place. Browse the 
     - **Increase grid size**: In Settings, increase the grid size (e.g. from 100m to 300m or larger) to reduce the number of rendered elements.
     - **Filter by time**: Use Advanced Search to limit data to a recent time range (e.g. Last 30 Days).
     - **Grid Mode**: Use the "Simplified" grid mode from within the map settings.
+</div>
 
+<div id="unexpected-colours" markdown>
 ??? question "Grid squares are showing unexpected colours."
     Grid square colours depend on the active **Coverage Mode**:
 
@@ -41,14 +48,18 @@ If you're having trouble with MeshMapper, you're in the right place. Browse the 
     - **Noise Floor**: Based on RF noise relative to each companion's baseline (green=quiet, red=loud)
 
     Check which mode is selected in the **Coverage Mode** section of the Layer Control.
+</div>
 
+<div id="no-neighbours" markdown>
 ??? question "I'm not seeing repeater neighbours, or the associations are old (orange)."
     MeshMapper determines a repeater's neighbours using the hop information contained in repeater adverts, contact adverts, or wardriving pings. These packets will need to travel between two or repeaters before getting ingested by an observer.  For example, an advert that goes directly from repeater to observer has no hops, therefore no neighbour information is available.  However, if that same advert hops to a different repeater first and then to the observer, one neighbour association can be made.  The more observers and repeaters a region has, the greater the possibility packets will jump around between repeaters and record hop/neighbour information.
+</div>
 
 ---
 
 ## Mobile App
 
+<div id="app-wont-connect" markdown>
 ??? question "The app won't connect to my MeshCore device."
     Bluetooth connections can be finicky. Try the following:
 
@@ -59,10 +70,14 @@ If you're having trouble with MeshMapper, you're in the right place. Browse the 
     5. If pairing fails repeatedly, remove the device from your phone's Bluetooth settings and re-pair.
 
     See the [Connection Guide](https://wiki.meshmapper.net/app_connection_guide/) for detailed pairing instructions.
+</div>
 
+<div id="outside-region" markdown>
 ??? question "The app says I'm outside of a region."
     You need to be within a registered MeshMapper region to start a wardriving session. If there isn't a region near you, you can [request one](https://wiki.meshmapper.net/onboarding).
+</div>
 
+<div id="gps-accuracy" markdown>
 ??? question "GPS isn't locking or accuracy is poor."
     GPS accuracy depends on your device and environment. Try the following:
 
@@ -70,14 +85,18 @@ If you're having trouble with MeshMapper, you're in the right place. Browse the 
     - Move to an area with a clear view of the sky (away from tall buildings or dense tree cover).
     - Wait a minute or two for the GPS to get a solid fix before starting a session.
     - On Android, ensure location mode is set to "High accuracy."
+</div>
 
 ---
 
 ## Administration
 
+<div id="cant-access-admin" markdown>
 ??? question "I can't access the admin portal."
     The admin portal is only available to region administrators. If you believe you should have access, confirm with the person who set up the region or contact a Moderator on Discord. See the [Administrator List](https://wiki.meshmapper.net/administratorlist/) to find your region's admin.
+</div>
 
+<div id="observer-not-working" markdown>
 ??? question "Observer data isn't coming through."
     If your observer isn't forwarding data:
 
@@ -86,6 +105,7 @@ If you're having trouble with MeshMapper, you're in the right place. Browse the 
     3. Check the **Observers** panel in Region Info to see if the observer is listed and its last-heard timestamp.
 
     See [MeshMapper MQTT Setup](https://wiki.meshmapper.net/mqtt-main/) for configuration details.
+</div>
 
 ---
 
