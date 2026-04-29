@@ -85,7 +85,7 @@ sudo systemctl start pymc-repeater
 Follow the logs to confirm the broker connection is working:
 
 ```bash
-sudo journalctl -u pymc-repeater.service -f | grep LetsMeshHandler
+sudo journalctl -u pymc-repeater.service -f | grep MeshMapper
 ```
 
 ## Verifying Your Observer
