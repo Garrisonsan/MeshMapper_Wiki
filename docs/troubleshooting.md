@@ -50,6 +50,11 @@ If you're having trouble with MeshMapper, you're in the right place. Browse the 
     Check which mode is selected in the **Coverage Mode** section of the Layer Control.
 </div>
 
+<div id="live-analyzer-lines" markdown>
+??? question "The Live Analyzer isn't drawing lines between some repeaters, or otherwise doesn't appear to be showing all packet paths."
+    The Live Visualization mode in the Packet Analyzer can only draw lines/paths between repeaters that are **not** in a duplicate or conflict state. Because duplicate repeaters share the same identifier, the system cannot determine which physical repeater was actually involved in the packet path, so lines are not drawn to avoid displaying misleading information.  This is the same duplicate detection logic that applies elsewhere in MeshMapper.
+</div>
+
 <div id="no-neighbours" markdown>
 ??? question "I'm not seeing repeater neighbours, or the associations are old (orange)."
     MeshMapper determines a repeater's neighbours using the hop information contained in repeater adverts, contact adverts, or wardriving pings. These packets will need to travel between two or repeaters before getting ingested by an observer.  For example, an advert that goes directly from repeater to observer has no hops, therefore no neighbour information is available.  However, if that same advert hops to a different repeater first and then to the observer, one neighbour association can be made.  The more observers and repeaters a region has, the greater the possibility packets will jump around between repeaters and record hop/neighbour information.
